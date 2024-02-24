@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İgor Ödeme Kuruluşu A.Ş.'nin sunduğu ödeme hizmetlerinden faydalanmak isteyen işletmeleri bizimle tanışmaya davet ediyoruz.">
+    <meta name="keywords" content="ödeme, payment, sanal pos, pos, alışveriş, kredi kartı, virtual pos, fatura, temsilci, işyeri, merchant, üye, bkm, mastercard, visa, troy">
+    <meta name="author" content="İgor Ödeme Kuruluşu A.Ş.">
+    <link rel="icon" href="index_files/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="index_files/img/favicon.ico" type="image/x-icon">
+    <title>Başvuru - İgor Ödeme Kuruluşu A.Ş.</title>
+    <!-- Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="index_files/css/themify.css">
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="index_files/css/bootstrap.css">
+    <!-- App css-->
+    <link id="color" rel="stylesheet" href="index_files/css/color-3.css" media="screen">
+  <body>
+  <script>
+	function selectAll(objId){
+		options = document.getElementById(objId);
+		for (i=0; i<options.length; i++){
+			options[i].selected = true;
+		}
+	}
+  </script>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+      <div class="theme-loader">    
+        <div class="loader-p"></div>
+      </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <section>         
+      <div class="container-fluid p-0"> 
+        <div class="row m-0">
+          <div class="col-xl-5"><img class="bg-img-cover bg-center" src="index_files/img/side-image.png" alt="loginpage"></div>
+          <div class="col-xl-7 p-0">
+            <div class="login-card row">
+                <form class="theme-form login-form" method="post" action="https://pf-dev.firisbe.com:8443/api/portal/pre-onboarding">
+                  <input type="hidden" name="tenantId" value="0f1815b3-0f18-15b3-0f18-15b30f1815b3" />
+                  <h4>İgor Ön Başvuru Formu</h4>
+                  <div class="form-group m-t-15">
+                    <label>İşletme Türü</label>
+                    <div class="input-group"><span class="input-group-text"><i class="icon-home"></i></span>
+                      <select class="form-select digits" id="exampleFormControlSelect9" required="" name="companyType">
+                        <option>Anonim Şirket</option>
+                        <option>Limited Şirket</option>
+                        <option>Şahıs İşletmesi (Vergi Levhası Var)</option>
+                        <option>Bireysel Başvuru (Vergi Levhası Yok / Muaf)</option>
+                        <option>Kooperatif</option>
+                        <option>Adi Ortaklık</option>
+                        <option>Dernek/Vakıf</option>
+                        <option>Site Yönetimi</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Başvurmak İstediğiniz Ürünü Seçin</label>
+                    <div class="input-group"><span class="input-group-text"><i class="icon-credit-card"></i></span>
+                      <select multiple style="height:140px" class="form-select digits" id="productType" required="" name="productType">
+                        <option>Sanal Pos</option>
+                        <option>Fiziki Pos</option>
+                        <option>GSM Mobil Ödeme Kabulü</option>
+                        <option>Link ile Ödeme Kabulü</option>
+                        <option>QR ile Ödeme Kabulü</option>
+                        <option>Açık Bankacılık İşlemleri</option>
+                      </select>
+                    </div>
+				  <a href="javascript:;" onclick="javascript:selectAll('productType');">Hepsi</a>
+                  </div>
+                  <div class="form-group">
+                    <label>Ad Soyad</label>
+                    <div class="small-group">
+                      <div class="input-group"><span class="input-group-text"><i class="icon-user"></i></span>
+                        <input class="form-control" type="text" required="" placeholder="Yetkili Adı" name="name">
+                      </div>
+                      <div class="input-group"><span class="input-group-text"><i class="icon-user"></i></span>
+                        <input class="form-control" type="text" required="" placeholder="Yetkili Soyadı" name="surname">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <label>Yetkili Telefon</label>
+                      <div class="input-group"><span class="input-group-text"><i class="icon-headphone"></i></span>
+                        <input class="form-control" type="tel" required="" placeholder="(532) 532 05 32" name="phone">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Yetkili E-posta</label>
+                    <div class="input-group"><span class="input-group-text"><i class="icon-email"></i></span>
+                      <input class="form-control" type="email" required="" placeholder="adres@eposta.com" name="email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="">
+                      <label class="text-muted" for="">Girdiğim Kişisel Verilerimin <a href="http://website.igor.com.tr/files/kvkk.pdf" target="_blank">KVKK Aydınlatma Metni</a> Kapsamında İşlenmesini Kabul Ediyorum.</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">Ön Başvuru Yap</button>
+                  </div>
+                  <p>Zaten bir hesabınız var mı?<a class="ms-2" href="https://igor-pf-test.firisbe.com/">Giriş yapın.</a></p>
+                </form>
+                <div class="col-xl-6 align-self-center p-1">
+                  <p class="fs-3 fw-bold"><span class="text-primary fs-2 fw-bold">3 adımda</span> ödeme almaya başlayın</p>
+                    <ol class="fs-5 fw-light">
+                      <li>Ön başvurunuzu yapın</li>
+                      <li>Bilgi ve belgelerinizi tamamlayın</li>
+                      <li>Sözleşmeyi onaylayın ve ödeme almaya başlayın</li>  
+                    </ol>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- page-wrapper end-->
+    <!-- scripts-->
+    <script src="index_files/js/jquery-3.5.1.min.js"></script>
+    <script src="index_files/js/script.js"></script>
+  </body>
+</html>
